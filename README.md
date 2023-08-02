@@ -1,5 +1,7 @@
 # blogging_website
 
+Deployed link: 
+
 Portfolio website: https://gaurab.in/
 
 
