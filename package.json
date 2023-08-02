@@ -11,11 +11,11 @@
     "slugify": "^1.6.5"
   },
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon index.js"
   },
   "name": "bootstrap_fullstack",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "index.js",
   "devDependencies": {
     "nodemon": "^2.0.21"
   },
