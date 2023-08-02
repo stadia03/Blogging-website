@@ -11,7 +11,7 @@
     "slugify": "^1.6.5"
   },
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon app.js"
   },
   "name": "bootstrap_fullstack",
   "version": "1.0.0",
