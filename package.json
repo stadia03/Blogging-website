@@ -11,18 +11,14 @@
     "jsonwebtoken": "^9.0.2",
     "marked": "^4.3.0",
     "method-override": "^3.0.0",
-<<<<<<< HEAD
     "mongoose": "^7.5.3",
     "node": "^19.8.1",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
-=======
-    "mongoose": "^7.0.2",
->>>>>>> 0e4c1b5fdd7d096a8c1dc80479985c898842f922
     "slugify": "^1.6.5"
   },
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js "
   },
   "name": "bootstrap_fullstack",
   "version": "1.0.0",
