@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # blogging_website
 
 Deployed link: https://gyaankhota.onrender.com/
@@ -42,3 +43,6 @@ Also, delete them.
 
 
 
+=======
+# Blogging-website
+>>>>>>> 3970afef7a0a435354b587b091471918f5ce0ca4
