@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const BLOGS = require('../models/blogs')
-<<<<<<< HEAD:routes/blogRoutes.js
 const passport = require('passport'); // Import passport
 
 
@@ -15,10 +14,6 @@ function isAuthenticated(req, res, next) {
 
 
 router.get('/',  async(req, res) => {
-=======
-
-router.get('/', async(req, res) => {
->>>>>>> 0e4c1b5fdd7d096a8c1dc80479985c898842f922:routers/routes.js
 
   const temp=await BLOGS.find().sort({created:'desc'});
 
@@ -32,7 +27,6 @@ router.get('/edit/:id',async(req,res)=>{
   
 })
 
-<<<<<<< HEAD:routes/blogRoutes.js
 router.get('/login',(req,res)=>{
   res.render('login');
 })
@@ -46,9 +40,6 @@ router.post('/login', passport.authenticate('local', {
 router.get('/register',(req,res)=>{
   res.render('register');
 })
-=======
-
->>>>>>> 0e4c1b5fdd7d096a8c1dc80479985c898842f922:routers/routes.js
 
 router.get('/new', (req, res) => {
 
@@ -92,10 +83,7 @@ router.put('/edit/:id', async (req, res) => {
 )
 
 router.post ('/new',async (req,res)=>{
-<<<<<<< HEAD:routes/blogRoutes.js
   console.log(req.body);
-=======
->>>>>>> 0e4c1b5fdd7d096a8c1dc80479985c898842f922:routers/routes.js
     let temp=new BLOGS({
       title: req.body.title,
       description: req.body.description,
@@ -113,16 +101,28 @@ router.post ('/new',async (req,res)=>{
     }
 })
 
+router.use( function( req, res, next ) {
+  // this middleware will call for each requested
+  // and we checked for the requested query properties
+  // if _method was existed
+  // then we know, clients need to call DELETE request instead
+  console.log("working");
+  if ( req.query._method == 'DELETE' ) {
+      // change the original METHOD
+      // into DELETE method
+      req.method = 'DELETE';
+      // and set requested url to /user/12
+      req.url = req.path;
+  }       
+  next(); 
+});
 
 router.delete('/:id',async(req,res)=>{
+  console.log("gg");
   await BLOGS.findByIdAndDelete(req.params.id);
   res.redirect('/');
 })
 
 
 
-<<<<<<< HEAD:routes/blogRoutes.js
 module.exports = router;
-=======
-module.exports = router;
->>>>>>> 0e4c1b5fdd7d096a8c1dc80479985c898842f922:routers/routes.js
