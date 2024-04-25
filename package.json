@@ -11,10 +11,14 @@
     "jsonwebtoken": "^9.0.2",
     "marked": "^4.3.0",
     "method-override": "^3.0.0",
+<<<<<<< HEAD
     "mongoose": "^7.5.3",
     "node": "^19.8.1",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
+=======
+    "mongoose": "^7.0.2",
+>>>>>>> 0e4c1b5fdd7d096a8c1dc80479985c898842f922
     "slugify": "^1.6.5"
   },
   "scripts": {
@@ -22,11 +26,14 @@
   },
   "name": "bootstrap_fullstack",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "index.js",
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "engines": {
+    "node": ">=14.20.1"
+  }
 }

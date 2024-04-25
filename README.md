@@ -1,5 +1,7 @@
 # blogging_website
 
+Deployed link: https://gyaankhota.onrender.com/
+
 Portfolio website: https://gaurab.in/
 
 
