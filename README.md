@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # blogging_website
 
 Deployed link: https://gyaankhota.onrender.com/
