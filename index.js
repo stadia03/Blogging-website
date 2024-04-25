@@ -1,5 +1,7 @@
 const  express= require('express');
-const router= require('./routers/routes');
+const blogsRoutes= require('./routes/blogRoutes');
+const AuthRoutes = require('./routes/auth'); // Update the path accordingly
+
 const app=express();
 const methodOverride = require('method-override');
 const mongoose= require('mongoose');
@@ -14,27 +16,33 @@ const mongoDb=process.env.mongoDbkeys;
 
 
 mongoose.connect(mongoDb)
-.then(console.log("Sucessfully Connected to mongoDB"))
-.then(()=>{
-  app.listen(4000);
- console.log("Listening on port 4000");
-})
-.catch((err)=>{console.log("Gand fatt rhe hai"+err)})
+  .then(() => {
+    console.log('Successfully Connected to MongoDB');
+    app.listen(4000, () => {
+      console.log('Listening on port 4000');
+    });
+  })
+  .catch((err) => {
+    console.log('Some issues regarding connection: ' + err);
+  });
 
 
 app.set('view engine','ejs');
+// app.use(session({
+//   secret: 'your-secret-key',
+//   resave: false,
+//   saveUninitialized: true
+// }));
+
+// // Initialize Passport.js
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 
-app.use('/',router);
+app.use('/',blogsRoutes);
 
 
-
-
-
-
-
-
-
+app.use('/', AuthRoutes);
 
 
 
